@@ -102,3 +102,10 @@ dist
 
 # TernJS port file
 .tern-port
+
+#webstorm
+*.iml
+*.xml
+/.idea/.gitignore
+/package-lock.json
+/yarn.lock
