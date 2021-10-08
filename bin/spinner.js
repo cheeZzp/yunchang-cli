@@ -1,5 +1,5 @@
-import ora from 'ora'
-// const ora = require("ora")
+// import ora from 'ora'
+const ora = require("ora")
 // 自定义文本信息
 const message = 'Loading unicorns'
 // 初始化
@@ -7,7 +7,7 @@ const spinner = ora(message);
 // 开始加载动画
 spinner.start();
 
-export default setTimeout(() => {
+setTimeout(() => {
     // 修改动画样式
 
     // Type: string

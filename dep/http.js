@@ -11,7 +11,7 @@ axios.interceptors.response.use(res => {
  * @returns Promise
  */
 async function getRepoList() {
-    return axios.get('https://api.github.com/orgs/users/cheeZzp/repos')
+    return axios.get('https://api.github.com/users/cheeZzp/repos')
 }
 
 /**
@@ -20,7 +20,7 @@ async function getRepoList() {
  * @returns Promise
  */
 async function  getTagList(repo) {
-    return axios.get(`https://api.github.com/repos/cheeZzp/template-vue2.0/tags`)
+    return axios.get(`https://api.github.com/repos/cheeZzp/${repo}/tags`)
 }
 
 module.exports = {

@@ -26,6 +26,7 @@
   "devDependencies": {
     "axios": "^0.21.4",
     "commander": "^8.2.0",
+    "download-git-repo": "^3.0.2",
     "ejs": "^3.1.6",
     "fs-extra": "^10.0.0",
     "inquirer": "^8.1.5"
@@ -34,6 +35,6 @@
     "chalk": "^4.1.2",
     "cross-spawn": "^7.0.3",
     "figlet": "^1.5.2",
-    "ora": "^6.0.1"
+    "ora": "^5.4.0"
   }
 }

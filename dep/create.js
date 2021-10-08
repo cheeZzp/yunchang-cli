@@ -25,15 +25,15 @@ module.exports = async function (name, options) {
 // 当前命令行选择的目录
     const cwd  = process.cwd();
     // 需要创建的目录地址
-    const targetAir  = path.join(cwd, name)
-    console.log("targetAir",targetAir)
+    const targetDir  = path.join(cwd, name)
+    console.log("targetDir",targetDir)
     console.log("project options is: " , options)
     // 目录是否已经存在？
-    if (fs.pathExistsSync(targetAir)) {
+    if (fs.pathExistsSync(targetDir)) {
         console.log("path")
         // 是否为强制创建？
         if (options.force) {
-            await fs.remove(targetAir)
+            await fs.remove(targetDir)
         } else {
             // TODO：询问用户是否确定要覆盖
             console.log(chalk.green("是否需要覆盖？"))
@@ -58,15 +58,15 @@ module.exports = async function (name, options) {
             if (action === 'overwrite') {
                 // 移除已存在的目录
                 console.log(`\r\nRemoving...`)
-                await fs.remove(targetAir)
+                await fs.remove(targetDir)
             }
         }
     }
 
     // 创建项目
-    const generator = new Generator(name, targetAir);
+    const generator = new Generator(name, targetDir);
 
     // 开始创建项目
-    generator.create()
+    await generator.create();
 
 }
